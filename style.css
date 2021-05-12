@@ -1,0 +1,195 @@
+:root{
+    --body-bg-color: #f6f7fc;
+    --border-color: #e1e2e8;
+    --box-shadow-color: #c7c7c7;
+    --li-hover-color: #e7eaf1;
+    --gray-btn-color: #bcbabe;
+    --red-btn-color: #ff5573;
+    --green-btn-color: #4fc377;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+body {
+    position: relative;
+    background-color: var(--body-bg-color);
+    user-select: none;
+}
+
+header {
+    height: 40px;
+    padding: 30px 20px;
+    margin: 0 30px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.alert-box {
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: var(--red-btn-color);
+    color: #fff;
+    position: absolute;
+    top: 110px;
+    left: 30px;
+}
+
+/***** ZOOM SECTION *****/
+#zoom {
+    position: relative;
+    height: fit-content;
+    float: right;
+}
+#zoom .zoom-out,
+#zoom .zoom-in,
+#zoom .percent {
+    display: inline-block;
+    background-color: #fff;
+    color: var(--gray-btn-color);
+    box-shadow: 0px 0px 5px var(--box-shadow-color);
+    cursor: pointer;
+}
+#zoom .zoom-out:hover,
+#zoom .zoom-in:hover,
+#zoom .percent:hover {
+    background-color: var(--gray-btn-color);
+    color: #fff;
+}
+#zoom .zoom-out i,
+#zoom .zoom-in i{
+    display: inline-block;
+    padding: 12px 15px;
+}
+#zoom .percent {
+    padding: 8px 15px;
+}
+#zoom ul.percent-list {
+    position: absolute;
+    top: 40px;
+    right: 55px;
+    z-index: 1;
+    background-color: #fff;
+    color: var(--gray-btn-color);
+    box-shadow: 0px 5px 14px var(--box-shadow-color);
+}
+#zoom ul.percent-list li {
+    padding: 3px 10px;
+    cursor: pointer;
+}
+.percent-list li:hover {
+    background-color: var(--li-hover-color);
+    color: #000;
+}
+
+/***** CHART BUTTONS *****/
+.btn {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.add-btn {
+    right: -35px;
+    background-color: var(--gray-btn-color);
+    padding: 3px 5px;
+}
+.delete-btn {
+    right: -65px;
+	background-color: var(--red-btn-color);
+    padding: 3px 6px;
+}
+.save-btn {
+    right: -35px;
+    background-color: var(--green-btn-color);
+    padding: 3px;
+}
+
+/***** CHART INPUT *****/
+input {
+    border: none;
+    outline: none;
+    text-align: center;
+    color: #666;
+}
+::placeholder {
+    color: inherit;
+}
+
+/***** CHART SECTION *****/
+#chart {
+    margin: 0 auto;
+    text-align: center;
+}
+#chart, #chart ul {
+    display: table;
+}
+#chart, #chart ul, #chart li {
+    position: relative;
+}
+#chart ul {
+    width: 100%;
+}
+#chart li {
+    display: table-cell;
+    padding: 10px 0;
+    vertical-align: top;
+}
+#chart li:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    outline: solid 1px var(--border-color);
+    content: "";
+}
+#chart li:first-child:before { left: 50%; }
+#chart li:last-child:before { right: 50%; }
+#chart p, #chart span {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    display: inline-block;
+    margin: 0 65px 10px;
+    padding: 5px 10px;
+    position: relative;
+}
+#chart > li > p {
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#chart ul:before,
+#chart p:before,
+#chart span:before {
+    position: absolute;
+    left: 50%;
+    outline: solid 1px var(--border-color);
+    content: "";
+    height: 10px;
+}
+#chart ul:before {
+    top: -10px;
+}
+#chart p:before,
+#chart span:before {
+    top: -11px;
+}
+#chart > li:before,
+#chart > li:after,
+#chart > li > p:before,
+#chart > li > span:before {
+    outline: none;
+}
+
+#top-parent {
+    position: absolute;
+}
+#top-parent-header {
+    cursor: move;
+}

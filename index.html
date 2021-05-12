@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome link -->
+    <script src="https://kit.fontawesome.com/f9a01ea1da.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- CSS style link -->
+    <link rel="stylesheet" href="style.css">
+    <title>Organization structure</title>
+</head>
+<body>
+    <header>
+        <div id="zoom">
+            <div class="zoom-out"><i class="fas fa-minus"></i></div>
+            <div class="percent">100%</div>
+            <ul class="percent-list" style="display: none;">
+                <li class="25">25%</li>
+                <li class="30">30%</li>
+                <li class="40">40%</li>
+                <li class="50">50%</li>
+                <li class="60">60%</li>
+                <li class="70">70%</li>
+                <li class="80">80%</li>
+                <li class="90">90%</li>
+                <li class="100">100%</li>
+                <li class="125">125%</li>
+                <li class="150">150%</li>
+            </ul>
+            <div class="zoom-in"><i class="fas fa-plus"></i></div>
+        </div>
+    </header>
+
+    <main>
+        <ul id="chart">
+            <li id="top-parent" style="zoom: 100%;">
+                <p id="top-parent-header">Categories <i class="btn add-btn fas fa-plus"></i></p>
+                <ul></ul>
+            </li>
+        </ul>
+    </main>
+
+    <!-- JavaScript link -->
+    <script src="script.js"></script>
+</body>
+</html>
